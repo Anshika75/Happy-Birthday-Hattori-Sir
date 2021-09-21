@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\Anshika Thakur\Documents\New folder\f.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    </head>
+    <body>    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    background-color: #850101 #ff496c;
+    position: relative;
+    overflow: hidden;
+}
+.page{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.page1{
+    background-color: #850101;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23ff496c' fill-opacity='0.42' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    z-index: 7;
+    transition: all 0.5s ease-in-out;
+}
+.page1 .profile{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    clip-path: polygon(50% 0,100% 30%,100% 70%,50% 100%,0 70%,0 30%);
+    background-image: url("https://api.sololearn.com/Uploads/Avatars/3274228.jpg");
+    background-size: 100% 100%;
+    transition: all 0.5s ease-in-out;
+}
+.page1 .border1{
+    height:180px;
+    width: 180px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ce2c42d8;
+    border-radius: 73% 68% 81% 100%/61% 53% 96% 68%;
+}
+.page1 .border2{
+    height:225px;
+    width: 225px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e73b5856;
+    border-radius: 25% 25% 25% 25%/25% 25% 25% 25%;
+}
+.page1 .border3{
+    height:275px;
+    width: 275px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(30deg);
+    background-color: #ff496d3a;
+    border-radius: 25% 25% 25% 25%/25% 25% 25% 25%;
+}
+.page1 .profile:hover{
+    transform: translate(-50%, -50%) scale(0.8, 0.8);
+}
+.page2{
+    background-color: #850101;
+    background-image: url("data:image/svg+xml,%3Csvg width='48' height='64' viewBox='0 0 48 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M48 28v-4L36 12 24 24 12 12 0 24v4l4 4-4 4v4l12 12 12-12 12 12 12-12v-4l-4-4 4-4zM8 32l-6-6 10-10 10 10-6 6 6 6-10 10L2 38l6-6zm12 0l4-4 4 4-4 4-4-4zm12 0l-6-6 10-10 10 10-6 6 6 6-10 10-10-10 6-6zM0 16L10 6 4 0h4l4 4 4-4h4l-6 6 10 10L34 6l-6-6h4l4 4 4-4h4l-6 6 10 10v4L36 8 24 20 12 8 0 20v-4zm0 32l10 10-6 6h4l4-4 4 4h4l-6-6 10-10 10 10-6 6h4l4-4 4 4h4l-6-6 10-10v-4L36 56 24 44 12 56 0 44v4z' fill='%23ff496c' fill-opacity='0.5' fill-rule='evenodd'/%3E%3C/svg%3E");
+    /* transform: translateX(100%) rotate(-60deg); */
+    transform-origin: top right;
+    transition: all 0.75s ease-in-out;
+    z-index: 5;
+}
+.page2 .profile{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8, 0.8);
+    background-color: red;
+    clip-path: polygon(50% 0,100% 30%,100% 70%,50% 100%,0 70%,0 30%);
+    background-image: url("https://api.sololearn.com/Uploads/Avatars/3274228.jpg");
+    background-size: 100% 100%;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.page2 .profile:hover{
+    transform: translate(-50%, -50%) rotate(-5deg) scale(1, 1);
+}
+.page2 .profile .txtbox{
+    background: rgba( 133, 1, 1, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 90%;
+    padding: 15px 0;
+    transform: scale(0);
+    transition: all 0.25s ease-in-out;
+    overflow: hidden;
+}
+.page2 .profile:hover .txtbox{
+    transform: scale(1);
+}
+.page2 .profile .txt{
+    font-family: 'Concert One', cursive;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    transition: all 0.75s ease-in-out;
+    background:-webkit-linear-gradient(45deg, #fd9bae, #df8e9b);
+    -webkit-background-clip: text;
+    padding:5px;
+    -webkit-text-fill-color: transparent;
+}
+.page2 .profile .txt1{
+    transform: translateY(-200%);
+}
+.page2 .profile .txt2{
+    transform: translateY(200%);
+}
+.page2 .profile:hover .txt1{
+    transform: translateY(0%);
+}
+.page2 .profile:hover .txt2{
+    transform: translateY(0%);
+}
+.page2 .box{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    clip-path: polygon(50% 0,100% 30%,100% 70%,50% 100%,0 70%,0 30%);
+    transition: all 0.5s ease-in-out;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.page2 .box.about{
+    top:25%;
+    left: 25%;
+    background-color: #ff496c;
+    color:#9d0f18;
+    transform: translate(-30%, -20%);
+}
+.page2 .box.about:hover{
+    transform: translate(-30%, -20%) rotate(-15deg);
+    color: #fddae1;
+}
+.page2 .box.thanks{
+    top:25%;
+    right: 25%;
+    background-color: #ce2c41;
+    color: #850101;
+    transform: translate(30%, -20%);
+}
+.page2 .box.thanks:hover{
+    transform: translate(30%, -20%) rotate(15deg);
+    color: #ceb8bb;
+}
+.page2 .box.wishes{
+    bottom:25%;
+    left: 25%;
+    background-color: #ce2c41;
+    color: #850101;
+    transform: translate(-30%, 20%);
+}
+.page2 .box.wishes:hover{
+    transform: translate(-30%, 20%) rotate(15deg);   
+    color: #ceb8bb;
+}
+.page2 .box.other{
+    bottom:25%;
+    right: 25%;
+    background-color: #ff496c;
+    color:#9d0f18;
+    transform: translate(30%, 20%);
+}
+.page2 .box.other:hover{
+    transform: translate(30%, 20%) rotate(-15deg);
+    color: #fddae1;
+}
+.page2 .box .txt{
+    font-family: 'Concert One', cursive;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    transition: all 0.25s ease-in-out;
+}
+.page3{
+    background: linear-gradient(#eb3349, #f45c43);
+    clip-path: polygon(85% 0,100% 0,100% 15%,92% 7%);
+    transition: all 0.75s ease-in-out;
+}
+.page3 .close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    clip-path: polygon(50% 0,100% 30%,100% 70%,50% 100%,0 70%,0 30%);
+    transition: all 0.5s ease-in-out; 
+    background-color: #850101;
+    color: #fd9bae;
+    cursor: pointer;
+    z-index: 5;
+    opacity: 0;
+}
+.page3 .close:hover{
+    color: #850101;
+    background-color: #fd9bae;
+    transform:  rotate(15deg);
+}
+.aboutbox{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90vh;
+    width: 90vw;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.aboutbox  .innerbox{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.aboutbox  .ab{
+    height: 225px;
+    width: 225px;
+    margin: 15px;
+    clip-path: polygon(50% 0,100% 30%,100% 70%,50% 100%,0 70%,0 30%);
+    transition: all 0.5s ease-in-out; 
+    background-color: #850101;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+.aboutbox  .ab:hover{
+    background-color: #ce2c41;
+}
+.aboutbox  .ab .quality{
+    font-family: 'Concert One', cursive;
+    width: 90%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    transition: all 0.75s ease-in-out;
+    background:-webkit-linear-gradient(45deg, #fd9bae, #df8e9b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2.5px;
+    text-transform: uppercase;
+    padding:5px 5px 5px 2px;
+}
+.aboutbox  .ab .desc{
+    font-family: 'Concert One', cursive;
+    width: 90%;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.75s ease-in-out;
+    background:-webkit-linear-gradient(45deg, #fcc8d3, #e2bcc3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 7px;
+    padding:5px;
+    line-height:.9rem;
+}
+.page4{
+    background: linear-gradient(#c7646c, #cf7b6c);
+    clip-path: polygon(0 0,15% 0,8% 7%,0% 15%); 
+    transition: all 0.75s ease-in-out;
+}
+.page4 .close{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    clip-path: polygon(50% 0,100% 30%,100% 70%,50% 100%,0 70%,0 30%);
+    transition: all 0.5s ease-in-out; 
+    background-color: #9d0f16;
+    color: #e2bcc3;
+    cursor: pointer;
+    z-index: 5;
+    opacity: 0;
+}
+.page4 .close:hover{
+    color: #9d0f16;
+    background-color: #e2bcc3;
+    transform:  rotate(15deg);
+}
+.page4 .aboutbox{
+    padding-top: 40px;
+    padding-bottom:10px;
+}
+.page4 .aboutbox .innerbox p{
+    font-family: 'Concert One', cursive;
+    width: 90%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    background:-webkit-linear-gradient(45deg, #850101, #9d0f16);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    padding:5px 5px 17px 5px;
+    line-height:0.9rem;
+}
+.page5{
+    background: linear-gradient(#eb3349, #f45c43);
+    clip-path: polygon(0 85%,7% 92%,15% 100%,0% 100%);
+    transition: all 0.75s ease-in-out;
+}
+.page5 .close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    clip-path: polygon(50% 0,100% 30%,100% 70%,50% 100%,0 70%,0 30%);
+    transition: all 0.5s ease-in-out; 
+    background-color: #850101;
+    color: #fd9bae;
+    cursor: pointer;
+    z-index: 5;
+    opacity: 0;
+}
+.page5 .close:hover{
+    color: #850101;
+    background-color: #fd9bae;
+    transform:  rotate(15deg);
+}
+.page5 .aboutbox .innerbox .ab{
+    position:relative;
+}
+.page5 .aboutbox .innerbox .ab img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    height: 300px;
+    width: 300px;
+    border-radius:50%;
+    clip-path: polygon(50% 0,100% 30%,100% 70%,50% 100%,0 70%,0 30%);
+}
+.page6{
+    background: linear-gradient(#c7646c, #cf7b6c);
+    clip-path: polygon(92% 92%,100% 85%,100% 100%,85% 100%); 
+    transition: all 0.75s ease-in-out;
+}
+.page6 .close{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    clip-path: polygon(50% 0,100% 30%,100% 70%,50% 100%,0 70%,0 30%);
+    transition: all 0.5s ease-in-out; 
+    background-color: #9d0f16;
+    color: #e2bcc3;
+    cursor: pointer;
+    z-index: 5;
+    opacity: 1;
+}
+.page6 .close:hover{
+    color: #9d0f16;
+    background-color: #e2bcc3;
+    transform:  rotate(15deg);
+}
+.page6 .aboutbox{
+    padding-top: 40px;
+}
+.page6 .aboutbox .innerbox p{
+    font-family: 'Concert One', cursive;
+    width: 90%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    background:-webkit-linear-gradient(45deg, #850101, #9d0f16);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    padding:5px;
+    line-height:.9rem;
+}
+    </style>
+    <audio controls style=" display:none;" loop   id="a"  >
+    <source  src=" https://www.dropbox.com/s/fxb702hge8vt38b/specialsong.mp3?dl=1"> 
+   <script>
+     Swal.fire('Happy Birthday Hattori Sir🎊\n A small try🧗‍♀️ to express my gratitude🤗 \n It is quite simple😕 and boring😥 as I am a beginner😔 \n Click on the profile pic at first page ')
+        </script>  
+      </audio>
+    <main>
+        <div class="page page1" id="p1">
+            <div class="border3"></div>
+            <div class="border2"></div>
+            <div class="border1"></div>
+            <div class="profile" onclick="strt()"></div>
+        </div>
+        <div class="page page2"  id="start">
+            <div class="profile">
+                <div class="txtbox">
+                    <div class="txt txt1">Happy B'day</div>
+                    <div class="txt txt2">Hattori Sir</div>    
+                </div>
+            </div>
+            <div class="box about" onclick="ab()">
+                <div class="txt">ABOUT</div>
+            </div>
+            <div class="box thanks" onclick="tg()">
+                <div class="txt">THANKS <br><br> GIVING</div>
+            </div>
+            <div class="box wishes" onclick="w()">
+                <div class="txt">WISHES</div>
+            </div>
+            <div class="box other" onclick="p()">
+                <div class="txt">PARTY</div>
+            </div> 
+            <div class="page page3" id="abp">
+                <div class="close" id="cp3" onclick="clp3()">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="aboutbox">
+                    <div class="innerbox">
+                        <div class="ab">
+                            <div class="quality">Respectfulness</div>
+                            <div class="desc">Treats everyone with courtesy, kindness, dignity and civility. Accept the flaws that others possess.</div>
+                        </div>
+                        <div class="ab">
+                            <div class="quality">Responsible</div>
+                            <div class="desc">Accepts personal, relational, career, community and social obligations even when they are difficult.</div>
+                        </div>
+                        <div class="ab">
+                            <div class="quality">Kind & Caring</div>
+                            <div class="desc">Considerate, helpful and benevolent to others. Most caring person. Make honest & loyal commitments.</div>
+                        </div>
+                        <div class="ab">
+                            <div class="quality">Encouraging</div>
+                            <div class="desc">Offer hope, strength and positive reinforcement to others. Have an awesome emotional understanding.</div>
+                        </div>
+                        <div class="ab">
+                            <div class="quality">All In One</div>
+                            <div class="desc">Trustworthy, supportive, loyal with secrets, protective, good listener, patient, comforting, committed.</div>
+                        </div>
+                        <div class="ab">
+                            <div class="quality">Turning Point</div>
+                            <div class="desc">Learnt to trust, open up and give friendship a chance because of him. Have changed a lot under his aura.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page page4" id="tp">
+                <div class="close" id="cp4" onclick="clp4()">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="aboutbox">
+                    <div class="innerbox">
+                        <p>
+                            You are one of the few people in my life who has helped make me into what I am today, So today I on this special day I would like to thank you :- <br><br> For being the one I can always rely on.<br><br> I'll never be able to repay you for your kindness and supporting me in my worst times, when even my bestest of bestest companions left me alone.<br><br> You are one of the few people in my life who has helped make me into what I am today. You really played an important part in shaping my lives. I don't know where I would be today if it weren't you. In short you are a blessing that one can dream in their sweetest dreams. <br><br> It's hard saying thanks to a person who deserves so much more than mere words. I hope I can repay even a part of support and care you have given me. <br><br> I still can't believe my luck, that I found someone as kind and generous as you. <br><br> Good friends are rarity these days and genuine ones are even harder to find. You are one of the best person I've ever had and I thank my lucky stars for the day you walked into my life. You always make me laugh and help lift my spirits even when I'm feeling down or discouraged. <br><br>I can never go wrong in life because I have your support. You have always been there, offered me wisdom, and encouraged me. Even duing the worst times, you gave me courage and helped me to keep moving forward. You were there when nobody else was and I want you to know that I will try my best to do the same for you. <br><br> You are that person you can trust blindly. You have trusted me even when I wasn't sure I deserved your trust. I have trusted you with secrets of my life. You are strong, caring, selfless and have always inspired me to become a better person. <br><br> Thank you for making me feel special and making my life an amazing journey. You turn my simplest days into an awesome one by being you. <br><br>Thank you for being there for me and being such an amazing friend. It's because of you that I believe friendship is the most precious gift a person can have.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="page page5" id="pp">
+                <div class="close" id="cp5" onclick="clp5()">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="aboutbox">
+                    <div class="innerbox">
+                        <div class="ab"><img src="https://images.unsplash.com/photo-1619158408840-611126ef8985?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bWFnZ2l8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=60" alt=""></div>
+                        <div class="ab"><img src="https://images.unsplash.com/photo-1555050338-0abc773f7978?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNob2NvbGF0ZSUyMGNha2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=60" alt=""></div>
+                        <div class="ab"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGljZSUyMGNyZWFtfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=60" alt=""></div>
+                        <div class="ab"><img src="https://images.unsplash.com/photo-1561882468-9110e03e0f78?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGNvZmZlZSUyMGN1cHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=60" alt=""></div>
+                        <div class="ab"><img src="https://images.unsplash.com/photo-1596463989140-3b600dab72e5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y29ja3RhaWxzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=60" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="page page6" id="wp">
+                <div class="close" id="cp6" onclick="clp6()">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="aboutbox">
+                    <div class="innerbox">
+                        <p>
+                            Wishes made on birthdays <br>
+Always come true<br>
+That is why I wish<br>
+The very best for you<br>
+I hope that you achieve<br>
+Everything you seek<br>
+There should never be a moment<br>
+In your life, sad or bleak<br>
+I wish that you soar to new heights<br>
+And wade into uncharted territory<br><br>
+On your birthday, I want to make a promise<br>
+
+Any celebration of your life, I will never miss<br>
+I also want to let you know<br>
+During tough times, I will never ever let go<br>
+I also want to express<br>
+That I wish you nothing but success<br>
+And no matter where I am, come what may<br>
+I’ll always drop by, to say Happy Birthday<br><br>
+
+Whenever I felt down in the dumps<br>
+You reminded me of my worth<br>
+Of fun, happiness and smiles<br>
+You’ve never created a dearth<br>
+Whenever I felt that the world<br>
+Was weighing down upon me<br>
+You reminded me to laugh<br>
+And take things lightly<br>
+Whenever anything was wrong<br>
+You reminded of things that were right<br>
+No matter how dark a storm life throws<br>
+I can never have you, out of my sight<br>
+Happy birthday!!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+            
+                window.addEventListener("mouseover",play);
+window.addEventListener("click",play);
+    function play() { document.getElementById("a").play();
+}
+        var start = document.getElementById("start");
+        var abp = document.getElementById("abp");
+        var p1 = document.getElementById("p1");
+        var cp3 = document.getElementById("cp3");
+        var tp = document.getElementById("tp");
+        var cp4 = document.getElementById("cp4");
+        var pp = document.getElementById("pp");
+        var cp5 = document.getElementById("cp5");
+        var wp = document.getElementById("wp");
+        var cp6 = document.getElementById("cp6");
+      // var sound = new Howl({
+  //src:"https://dl.dropbox.com/s/53vklwjxkbc5yfd/nightcore%20hey%20brother%20%20switching%20vocals%20%20%20lyrics.mp3?dl=1"
+//,
+//loop: true}); 
+        function strt(){
+            start.style.transform = "translateX(0%) rotate(0deg)";
+           //s/ound.play;
+            setTimeout( () => {
+               p1.style.zIndex = "-5"; 
+            }, 1000);
+        }
+        function ab(){
+            abp.style.clipPath = "polygon(0 0,100% 0,100% 100%,0 100%)";
+            cp3.style.opacity = "1";
+        }
+        function clp3(){ 
+            abp.style.clipPath = "polygon(85% 0,100% 0,100% 15%,92% 7%)";
+            cp3.style.opacity = "0";
+        }
+        function tg(){
+            tp.style.clipPath = "polygon(0 0,100% 0,100% 100%,0 100%)";
+            cp4.style.opacity = "1";
+        }
+        function clp4(){ 
+            tp.style.clipPath = "polygon(0 0,15% 0,8% 7%,0% 15%)";
+            cp4.style.opacity = "0";
+        }
+        function p(){
+            pp.style.clipPath = "polygon(0 0,100% 0,100% 100%,0 100%)";
+            cp5.style.opacity = "1";
+        }
+        function clp5(){ 
+            pp.style.clipPath = "polygon(0 85%,7% 92%,15% 100%,0% 100%)";
+            cp5.style.opacity = "0";
+        }
+        function w(){
+            wp.style.clipPath = "polygon(0 0,100% 0,100% 100%,0 100%)";
+            cp6.style.opacity = "1";
+        }
+        function clp6(){ 
+            wp.style.clipPath = "polygon(92% 92%,100% 85%,100% 100%,85% 100%)";
+            cp6.style.opacity = "0";
+        }
+    </script>
+</body>
+</html>
